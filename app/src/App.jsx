@@ -15,9 +15,11 @@ const App = () => {
   if(tours.length === 0){
     return (
       <Fragment>
-        <div>
-          <div>No tours Left</div>
-          <button onClick={()=>setTours(data)}> Refresh</button>
+       <div className="refresh">
+          <h2>No Tours Left</h2>
+          <button className="btn-white" onClick={() => setTours(data)}>
+            Refresh
+          </button>
         </div>
       </Fragment>
     )
@@ -25,7 +27,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <h2>Plan With Saksham</h2>
+     
       <Tours tours={tours} removeTour={removeTour}></Tours>
     </Fragment>
   )
